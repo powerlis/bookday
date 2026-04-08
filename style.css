@@ -208,15 +208,29 @@
       .item-info-panel { min-height: 180px; max-height: 220px; }
     }
 
-.inventory-logo {
-  width: 1em;
-  height: 1em;
-  margin-left: 6px;
-  vertical-align: middle;
-  filter: drop-shadow(0 0 3px rgba(246,173,85,0.7));
-  transition: transform 0.2s ease;
-}
+    .inventory-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1;
+    }
 
-.inventory-btn:hover .inventory-logo {
-  transform: scale(1.15);
-}
+    .inventory-logo {
+      width: 1.05em;
+      height: 1.05em;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 2px rgba(246, 173, 85, 0.45));
+      transform: translateY(1px);
+      transition: transform 0.2s ease, filter 0.2s ease;
+      image-rendering: auto;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .inventory-btn:hover .inventory-logo {
+        transform: translateY(1px) scale(1.08);
+        filter: drop-shadow(0 0 4px rgba(246, 173, 85, 0.65));
+      }
+    }
+
