@@ -1,13 +1,12 @@
-// 기존 game.js에서 GameInventory 부분만 수정된 전체 코드 예시
+const { useState } = React;
 
-// ... (기존 코드 그대로 유지)
-
-const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, onUseItem, usePrompt = '' }) => {
-  const [selectedItem, setSelectedItem] = useState(null);
-  const GRID_SIZE = 12;
+const GameInventory = ({ items, isOpen, onClose, notification }) => {
 
   if (!isOpen) {
-    return React.createElement('div', { className: 'inventory-btn-container' },
+    return React.createElement(
+      'div',
+      { className: 'inventory-btn-container' },
+
       React.createElement(
         'button',
         { className: 'inventory-btn', onClick: () => onClose(false) },
@@ -22,9 +21,31 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
         items.length > 0 &&
           React.createElement('span', { className: 'item-count' }, items.length)
       ),
-      notification && React.createElement('div', { className: 'inventory-notification' }, notification)
+
+      notification &&
+        React.createElement('div', { className: 'inventory-notification' }, notification)
     );
   }
 
-  // ... (이하 기존 코드 그대로 유지)
+  return React.createElement('div', null, '인벤토리 열림');
 };
+
+function App() {
+  const [open, setOpen] = useState(false);
+
+  return React.createElement(
+    'div',
+    { className: 'game-container' },
+
+    React.createElement(GameInventory, {
+      items: [1, 2, 3],
+      isOpen: open,
+      onClose: setOpen,
+      notification: null
+    })
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  React.createElement(App)
+);
