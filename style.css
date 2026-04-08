@@ -208,8 +208,6 @@
       .item-info-panel { min-height: 180px; max-height: 220px; }
     }
 
-/* 기존 style.css 맨 아래에 추가 */
-
 .inventory-logo {
   width: 1em;
   height: 1em;
