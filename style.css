@@ -207,3 +207,18 @@
       .slot-emoji { font-size: 1.5rem; }
       .item-info-panel { min-height: 180px; max-height: 220px; }
     }
+
+/* 기존 style.css 맨 아래에 추가 */
+
+.inventory-logo {
+  width: 1em;
+  height: 1em;
+  margin-left: 6px;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 3px rgba(246,173,85,0.7));
+  transition: transform 0.2s ease;
+}
+
+.inventory-btn:hover .inventory-logo {
+  transform: scale(1.15);
+}
