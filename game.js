@@ -1,3 +1,5 @@
+import logo from './logo.png';
+
 const { useState, useEffect, useCallback } = React;
 
 const SCENES = {
@@ -94,7 +96,34 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
   const GRID_SIZE = 12;
   if (!isOpen) {
     return React.createElement('div', { className: 'inventory-btn-container' },
-      React.createElement('button', { className: 'inventory-btn', onClick: () => onClose(false) }, '📦 소지품 ', items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)),
+      React.createElement(
+  'button',
+  { className: 'inventory-btn', onClick: () => onClose(false) },
+
+  React.createElement(
+    'span',
+    { style: { display: 'inline-flex', alignItems: 'center', gap: '4px' } },
+
+    '📦 소지품',
+
+    React.createElement('img', {
+      src: logo,   // 👈 import한 이미지 사용
+      alt: 'logo',
+      style: {
+        width: '1em',
+        height: '1em',
+        objectFit: 'contain'
+      }
+    })
+  ),
+
+  items.length > 0 &&
+    React.createElement(
+      'span',
+      { className: 'item-count' },
+      items.length
+    )
+),
       notification && React.createElement('div', { className: 'inventory-notification' }, notification)
     );
   }
