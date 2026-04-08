@@ -227,6 +227,11 @@
       image-rendering: auto;
     }
 
+    .inventory-box-emoji {
+      display: inline-block;
+      transform: translateY(-1px);
+    }
+
     @media (hover: hover) and (pointer: fine) {
       .inventory-btn:hover .inventory-logo {
         transform: translateY(1px) scale(1.08);
