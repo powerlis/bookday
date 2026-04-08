@@ -1,4 +1,3 @@
-
 const { useState, useEffect, useCallback } = React;
 
 const SCENES = {
@@ -95,15 +94,7 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
   const GRID_SIZE = 12;
   if (!isOpen) {
     return React.createElement('div', { className: 'inventory-btn-container' },
-      React.createElement(
-  'button',
-  { className: 'inventory-btn', onClick: () => onClose(false) },
-
-  React.createElement(
-    'span',
-    { style: { display: 'inline-flex', alignItems: 'center', gap: '4px' } },
-
-React.createElement('button', { className: 'inventory-btn', onClick: () => onClose(false) }, '📦 소지품 ', items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)),
+      React.createElement('button', { className: 'inventory-btn', onClick: () => onClose(false) }, '📦 소지품 ', items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)),
       notification && React.createElement('div', { className: 'inventory-notification' }, notification)
     );
   }
@@ -276,7 +267,7 @@ function BloomTheStory() {
         return React.createElement('div', { className: 'scene intro-scene' },
           React.createElement('div', { className: 'title-container' },
             React.createElement('h1', { className: 'game-title' }, '이야기꽃을 피워줘'),
-            React.createElement('p', { className: 'game-subtitle' }, '전통문화고-세계 책과 저작권의 날 행사')
+            React.createElement('p', { className: 'game-subtitle' }, '세계 책과 저작권의 날 행사')
           ),
           React.createElement('button', { className: 'start-btn', onClick: () => goToScene(SCENES.WAKE_UP) }, '시작하기')
         );
