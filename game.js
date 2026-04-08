@@ -104,26 +104,7 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
     'span',
     { style: { display: 'inline-flex', alignItems: 'center', gap: '4px' } },
 
-    '📦 소지품',
-
-    React.createElement('img', {
-      src: logo,   // 👈 import한 이미지 사용
-      alt: 'logo',
-      style: {
-        width: '1em',
-        height: '1em',
-        objectFit: 'contain'
-      }
-    })
-  ),
-
-  items.length > 0 &&
-    React.createElement(
-      'span',
-      { className: 'item-count' },
-      items.length
-    )
-),
+React.createElement('button', { className: 'inventory-btn', onClick: () => onClose(false) }, '📦 소지품 ', items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)),
       notification && React.createElement('div', { className: 'inventory-notification' }, notification)
     );
   }
