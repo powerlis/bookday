@@ -100,12 +100,13 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
         React.createElement(
           'span',
           { className: 'inventory-label' },
-          '📦 소지품',
           React.createElement('img', {
             src: 'logo.png',
             alt: '로고',
             className: 'inventory-logo'
-          })
+          }),
+          '소지품',
+          React.createElement('span', { className: 'inventory-box-emoji' }, '📦')
         ),
         items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)
       ),
