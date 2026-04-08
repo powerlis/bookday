@@ -267,7 +267,7 @@ function BloomTheStory() {
         return React.createElement('div', { className: 'scene intro-scene' },
           React.createElement('div', { className: 'title-container' },
             React.createElement('h1', { className: 'game-title' }, '이야기꽃을 피워줘'),
-            React.createElement('p', { className: 'game-subtitle' }, '세계 책과 저작권의 날 행사')
+            React.createElement('p', { className: 'game-subtitle' }, '전통문화고-세계 책과 저작권의 날 행사')
           ),
           React.createElement('button', { className: 'start-btn', onClick: () => goToScene(SCENES.WAKE_UP) }, '시작하기')
         );
