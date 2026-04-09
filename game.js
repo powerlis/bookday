@@ -644,7 +644,7 @@ function BloomTheStory() {
                 React.createElement('p', { className: 'completion-instruction' }, '해당 화면을 캡쳐하여', React.createElement('br'), React.createElement('strong', null, '도서관 사서선생님'), '께 보여주세요'),
                 React.createElement('p', { className: 'completion-reward' }, '🌹 세계 책과 저작권의 날', React.createElement('br'), '상품을 드립니다 🌹'),
                 React.createElement('p', { className: 'completion-note' }, '(*선착순, 상품 소진 시 마감)'),
-                React.createElement('p', { className: 'completion-note' }, '(💕전통문화고 도서실로 오세요^^)')
+                React.createElement('p', { className: 'completion-note' }, '💕전통문화고 도서실로 오세요^^')
               ),
           endingStep >= 3 && React.createElement('div', { className: 'falling-petals' },
             [...Array(15)].map((_, i) => React.createElement('div', { key: i, className: 'falling-petal', style: { left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 3}s`, animationDuration: `${3 + Math.random() * 2}s` } }))
