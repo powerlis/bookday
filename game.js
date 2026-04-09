@@ -100,13 +100,12 @@ const GameInventory = ({ items, isOpen, onClose, notification, useMode = false, 
         React.createElement(
           'span',
           { className: 'inventory-label' },
+          '📦 소지품',
           React.createElement('img', {
             src: 'logo.png',
             alt: '로고',
             className: 'inventory-logo'
-          }),
-          '소지품',
-          React.createElement('span', { className: 'inventory-box-emoji' }, '📦')
+          })
         ),
         items.length > 0 && React.createElement('span', { className: 'item-count' }, items.length)
       ),
@@ -282,7 +281,7 @@ function BloomTheStory() {
         return React.createElement('div', { className: 'scene intro-scene' },
           React.createElement('div', { className: 'title-container' },
             React.createElement('h1', { className: 'game-title' }, '이야기꽃을 피워줘'),
-            React.createElement('p', { className: 'game-subtitle' }, '전통문화고-세계 책과 저작권의 날 행사')
+            React.createElement('p', { className: 'game-subtitle' }, '세계 책과 저작권의 날 행사')
           ),
           React.createElement('button', { className: 'start-btn', onClick: () => goToScene(SCENES.WAKE_UP) }, '시작하기')
         );
@@ -646,7 +645,6 @@ function BloomTheStory() {
                 React.createElement('p', { className: 'completion-reward' }, '🌹 세계 책과 저작권의 날', React.createElement('br'), '상품을 드립니다 🌹'),
                 React.createElement('p', { className: 'completion-note' }, '(*선착순, 상품 소진 시 마감)')
               ),
-                                                                     
           endingStep >= 3 && React.createElement('div', { className: 'falling-petals' },
             [...Array(15)].map((_, i) => React.createElement('div', { key: i, className: 'falling-petal', style: { left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 3}s`, animationDuration: `${3 + Math.random() * 2}s` } }))
           )
