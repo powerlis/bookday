@@ -646,21 +646,7 @@ function BloomTheStory() {
                 React.createElement('p', { className: 'completion-reward' }, '🌹 세계 책과 저작권의 날', React.createElement('br'), '상품을 드립니다 🌹'),
                 React.createElement('p', { className: 'completion-note' }, '(*선착순, 상품 소진 시 마감)')
               ),
-                                   /* 👇 여기 추가 */
-React.createElement(
-  'div',
-  { className: 'completion-footer' },
-
-  React.createElement('img', {
-    src: 'logo.png',
-    alt: 'logo',
-    style: { width: '40px', verticalAlign: 'middle', marginRight: '8px' }
-  }),
-
-  React.createElement('span', null, '전통문화고 도서실로 오세요!')
-)
-
-                                   
+                                                                     
           endingStep >= 3 && React.createElement('div', { className: 'falling-petals' },
             [...Array(15)].map((_, i) => React.createElement('div', { key: i, className: 'falling-petal', style: { left: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 3}s`, animationDuration: `${3 + Math.random() * 2}s` } }))
           )
